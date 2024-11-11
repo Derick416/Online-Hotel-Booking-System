@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Payment Page</title>
+    <style>
+        body {
+            background: url('bg3.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white; /* Text color white for better visibility on dark background */
+        }
+        .payment-card, .confirmation-card, .cancellation-card {
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+            color: white; /* White text inside the divs */
+            transition: transform 0.3s ease-in-out;
+        }
+        .payment-card:hover, .confirmation-card:hover, .cancellation-card:hover {
+            transform: scale(1.05); /* Slight scale effect on hover */
+        }
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            width: 100%;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+        .social-icons a:hover {
+            color: #FFD700; /* Gold color on hover for social icons */
+        }
+        .container {
+            max-width: 960px; /* Limit the container width for better layout */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center mb-4">Payment Options</h2>
+
+        <div class="row">
+            <!-- Payment Options Div -->
+            <div class="col-md-6">
+                <div class="payment-card p-4">
+                    <h4 class="card-title">Pay Using Credit or Debit Card</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number</label>
+                            <input type="text" class="form-control" id="cardNumber" placeholder="Enter your card number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardName">Cardholder Name</label>
+                            <input type="text" class="form-control" id="cardName" placeholder="Enter cardholder name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="expiryDate">Expiry Date</label>
+                                <input type="text" class="form-control" id="expiryDate" placeholder="MM/YY" required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="cvv">CVV</label>
+                                <input type="text" class="form-control" id="cvv" placeholder="CVV" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Pay Now</button>
+                    </form>
+
+                    <hr class="my-4">
+
+                    <h4 class="card-title">Pay Using Mobile Money</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="mobileNumber">MTN/AIRTEL Number</label>
+                            <input type="text" class="form-control" id="mobileNumber" placeholder="Enter your mobile number" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Pay Now</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Booking Confirmation Div -->
+            <div class="col-md-6">
+                <div class="confirmation-card p-4">
+                    <h4 class="card-title">Send Booking Confirmation</h4>
+                    <form>
+                        <div class="form-group">
+                            <label for="confirmationContact">Contact Number or Email</label>
+                            <input type="text" class="form-control" id="confirmationContact" placeholder="Enter your phone number or email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Confirmation</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cancellation Policy Div -->
+        <div class="cancellation-card p-4 mt-4">
+            <h4 class="card-title">Cancellation Policy</h4>
+            <p>You may cancel your reservation for no charge. Cancellations should be made a day before arrival.</p>
+            <form>
+                <div class="form-group">
+                    <label for="cancellationReason">Reason for Cancellation</label>
+                    <textarea class="form-control" id="cancellationReason" rows="3" placeholder="Enter your reason here" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-danger">Submit Cancellation</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <h4>Ikoro Hotel Kisoro</h4>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>Contact: 0754 098 515</p>
+        <p>Email: info@ikorohotelkisoro.com</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+

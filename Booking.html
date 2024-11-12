@@ -56,7 +56,7 @@
         <h2 class="text-center mb-4">Room Booking</h2>
         <p class="text-center">All rooms include complimentary breakfast.</p>
 
-        <!-- Deluxe Room -->
+       
         <div class="room-card">
             <h4>Deluxe Room</h4>
             <img src="deluxe room.jpg" alt="Deluxe Room" class="room-image">
@@ -69,7 +69,7 @@
             </div>
         </div>
 
-        <!-- Standard Room -->
+   
         <div class="room-card">
             <h4>Standard Room</h4>
             <img src="standerd room.jpg" alt="Standard Room" class="room-image">
@@ -82,7 +82,7 @@
             </div>
         </div>
 
-        <!-- Family Room -->
+       
         <div class="room-card">
             <h4>Family Room</h4>
             <img src="family room.jpg" alt="Family Room" class="room-image">
@@ -95,11 +95,11 @@
             </div>
         </div>
 
-        <!-- Payment Options Section -->
+       
         <div id="paymentOptions" class="payment-card">
             <h4 class="card-title">Payment Options</h4>
 
-            <!-- Pay Using Credit or Debit Card -->
+          
             <h5>Pay Using Credit or Debit Card</h5>
             <form>
                 <div class="form-group">
@@ -125,7 +125,7 @@
 
             <hr class="my-4">
 
-            <!-- Pay Using Mobile Money -->
+           
             <h5>Pay Using Mobile Money</h5>
             <form>
                 <div class="form-group">
@@ -151,25 +151,24 @@
 
     <script>
         function confirmBooking(roomType) {
-            // Show a confirmation message with two options: Continue to Payment or Cancel Booking
+            
             const userConfirmation = confirm("You have successfully booked the " + roomType.charAt(0).toUpperCase() + roomType.slice(1) + " room. Would you like to continue to payment or cancel the booking?");
             
             if (userConfirmation) {
-                // If user clicks 'OK', proceed to payment page (open the payment section or redirect)
+              
                 showPaymentOptions(roomType);
             } else {
-                // If user clicks 'Cancel', just display a cancellation message
                 alert("Your booking has been cancelled.");
-                // Optionally, reset the form or navigate to the homepage
+                
             }
         }
 
         function showPaymentOptions(roomType) {
-            // Hide the room cards and show the payment options section
+           
             document.querySelectorAll('.room-card').forEach(card => card.style.display = 'none');
             document.getElementById('paymentOptions').style.display = 'block';
 
-            // Optionally, display the selected room type in the payment options section
+            
             alert("You have selected the " + roomType.charAt(0).toUpperCase() + roomType.slice(1) + " room. Please proceed with payment.");
         }
     </script>
